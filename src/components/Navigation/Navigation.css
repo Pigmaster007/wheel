@@ -1,0 +1,7 @@
+.Navigation {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 5%;
+    z-index: 2;
+}
