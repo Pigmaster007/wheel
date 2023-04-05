@@ -1,5 +1,3 @@
-import Navigation from '../Navigation/Navigation';
-
 function Card(imgUrl) {
     const handleClick = (e) => {
       if (e.target.className === "cards") {
@@ -8,13 +6,7 @@ function Card(imgUrl) {
         e.target.className = "cards"
         }
     }
-   return (
-     <div key={imgUrl}>
-      <Navigation name="Previous"/>
-      <img src={imgUrl} alt="img"  className="cards" onClick={handleClick}/>
-      <Navigation name="Next"/>
-     </div>
-   ) 
+   return <img src={imgUrl} key={imgUrl} alt="img" className="cards" onClick={handleClick}/> 
   }
 
   export default Card;

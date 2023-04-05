@@ -3,6 +3,37 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border-radius: 5%;
+    border-radius: 15%;
     z-index: 2;
+    cursor:default;
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.leftButton {
+    left:2%;
+    top: 50%;
+}
+.rightButton {
+    right: 2%;
+    top: 50%;
+}
+.closeButton {
+    right: 2%;
+    top: 2%;
+    height: 30px;
+    width: 30px;
+}
+
+.Navigation:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Navigation:active {
+    transform: translateY(2px);
 }
