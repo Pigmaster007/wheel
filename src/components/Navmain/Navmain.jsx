@@ -32,10 +32,14 @@ function Navmain() {
     }
 
     const closeImg = (e) => {
+        e.preventDefault();
+        alert('test');
         e.target.parentNode.parentNode.style.display = 'none'
     }
 
     const closeImgX = (e) => {
+        alert('test');
+        e.preventDefault();
         e.target.parentNode.style.display = 'none'
     }
 
