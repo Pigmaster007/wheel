@@ -8,47 +8,37 @@ function Navmain() {
     const [index, setIndex] = useState(0);
 
     function decrementIndex() {
-        setIndex((prevIndex) => 
-        {if (prevIndex >= 0) {
-            prevIndex = prevIndex - 1
-            console.log(prevIndex)
+        if (index > 0) {
+            setIndex((prevIndex) => prevIndex - 1)
         } else {
-            prevIndex = imgArr.length
-            console.log(prevIndex)
+            setIndex((prevIndex) => prevIndex = imgArr.length - 1)
         }
-        })
     }
 
     function inkrementIndex() {
-        setIndex((prevIndex) => 
-        {if (prevIndex <= imgArr.length) {
-            prevIndex = prevIndex + 1
-            console.log(prevIndex)
+        if (index < imgArr.length -1) {
+            setIndex((prevIndex) => prevIndex + 1)
         } else {
-            prevIndex = 0
-            console.log(prevIndex)
+            setIndex((prevIndex) => prevIndex = 0) 
         }
-        })
     }
 
     const closeImg = (e) => {
         e.preventDefault();
-        alert('test');
         e.target.parentNode.parentNode.style.display = 'none'
     }
 
     const closeImgX = (e) => {
-        alert('test');
         e.preventDefault();
         e.target.parentNode.style.display = 'none'
     }
 
     return (
     <div className="NavMain">
-        <Navigation name="Previous" onClick={decrementIndex}/>
+        <Navigation name="Previous" handleClick={decrementIndex}/>
         <div><img src={imgArr[index]} alt="img" className="active" onClick={closeImg}/></div>
-        <Navigation name="Next" onClick={inkrementIndex}/>
-        <Navigation name="X" onClick={closeImgX}/>
+        <Navigation name="Next" handleClick={inkrementIndex}/>
+        <Navigation name="X" handleClick={closeImgX}/>
     </div>    
 )}
 
