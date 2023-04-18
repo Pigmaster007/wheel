@@ -1,17 +1,21 @@
-import Gallery from './components/Gallery/Gallery';
-import Navmain from './components/Navmain/Navmain';
-import Active from './components/Active/Active';
+import Gallery from "./components/Gallery/Gallery";
+// import Navmain from "./components/Navmain/Navmain";
+//gallery render imgs;
+const IMG_ARR = [
+  "images/img0.jpg",
+  "images/img1.jpg",
+  "images/img2.jpg",
+  "images/img3.jpg",
+  "images/img4.jpg",
+];
 
-function App () {
-    
-
-    return (
+function App() {
+  return (
     <>
-        <Gallery />
-        <Navmain />
-        <Active/>
+      <Gallery collection={IMG_ARR} />
+      {/* <Navmain changeDisplay={siblingValue} clickNavMain={navmainNone}/> */}
     </>
-    )
+  );
 }
 
 export default App;
